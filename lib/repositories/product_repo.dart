@@ -12,7 +12,7 @@ Future<List<ProductModel>> getAllProductRepo() async {
   var response = await http.get(url);
   if (response.statusCode == 200) {
     List<ProductModel> products = [];
-    for (Map data in json.decode(response.body)['data']) {
+    for (Map data in json.decode(response.body)['data']['data']) {
       products.add(ProductModel.fromJson(data));
     }
     return products;

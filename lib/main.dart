@@ -20,10 +20,13 @@ import 'controller/coupon/coupon_screen_controller.dart';
 import 'controller/coupon/edit_coupon_screen_controller.dart';
 import 'controller/product/view_product_controller.dart';
 import 'controller/product/view_product_variant_screen_controller.dart';
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 

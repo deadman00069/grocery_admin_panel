@@ -53,7 +53,7 @@ class _SiteLayoutState extends State<SiteLayout> {
             child: Padding(
               padding: const EdgeInsets.only(right: 16),
               child: Text(
-                controller.name!,
+                controller.name??'',
                 style: Theme.of(context).textTheme.bodyText2!.copyWith(
                       color: Colors.white,
                       fontWeight: FontWeight.w500,
@@ -133,8 +133,8 @@ class _SiteLayoutState extends State<SiteLayout> {
               title: Text(
                 'Bundles',
                 style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
+                      fontWeight: FontWeight.bold,
+                    ),
               ),
               leading: const Icon(Icons.topic),
               onTap: () {

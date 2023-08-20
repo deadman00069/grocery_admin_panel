@@ -182,6 +182,7 @@ class _ProductScreenState extends State<ProductScreen> {
                                                   controller
                                                       .products[index].images!,
                                               fit: BoxFit.cover,
+                                              headers: const {},
                                             ),
                                           ),
                                           const SizedBox(

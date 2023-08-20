@@ -13,8 +13,6 @@ Future<LoginModel?> loginRepo(String email, String phoneNo) async {
       'email': email,
       'phone_no': phoneNo,
     });
-    print(response.statusCode);
-    print(response.body);
     if (response.statusCode == 200 &&
         json.decode(response.body)['status'] == true) {
       return LoginModel.fromJson(json.decode(response.body));
